@@ -4,12 +4,14 @@ mongo.connect("mongodb+srv://admin:differentpassword@cluster0.sj6zhoc.mongodb.ne
 
 const todoSchema = mongo.Schema({
     title: String,
-    decsription:String,
+    description:String,
     status: Boolean
 })
 
 const todo = mongo.model("todos",todoSchema);
 
-module.exports = {todo}
+module.exports = {
+    todo:todo
+}
 
 
