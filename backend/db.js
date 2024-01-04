@@ -1,5 +1,6 @@
 const mongo = require('mongoose');
 
+//add your connection link here
 mongo.connect("mongodb+srv://admin:differentpassword@cluster0.sj6zhoc.mongodb.net/todo-app")
 
 const todoSchema = mongo.Schema({
