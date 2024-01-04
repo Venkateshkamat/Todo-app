@@ -1,10 +1,14 @@
 const express = require('express');
 const {createTodo,updateTodo} = require('./types');
 const {todo} = require('./db');
+const cors = require('cors');
 
 const app = express();
+//render cloud for free express
+//verecl for frontend deploy
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/todo",async (req,res)=>{
     const payload  = req.body;
